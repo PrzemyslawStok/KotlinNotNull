@@ -31,6 +31,26 @@ fun main() {
         println(it)
     }
 
+    example1()
+}
 
+fun example1(){
+    var name:String? = "Przemysław"
 
+    name?.let{
+        println("Wartość wynosi: ${it}")
+    }.also{
+        println("To cześć pierwszego bloku also")
+    }
+
+    if(true)
+        name = null
+    else
+        name = "Przemysław 1"
+
+    name?.let{
+        println("Wartość wynosi: ${it}")
+    }.also {
+        println("To część bloku also")
+    }
 }
