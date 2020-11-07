@@ -66,6 +66,18 @@ fun example1a(){
     if(true)
         str1 = null
 
-    println("Długość napisu ${str1!!.length}")
+    try {
+        println("Długość napisu ${str1!!.length}")
+    }catch(e: NullPointerException){
+        println("Napis zawiera null")
+    }
+
+    println("Długość napisu ${str1?.length}")
+
+    val tab:Array<Int?> = arrayOf(1,2,3,4,5,null,null)
+    val tab1 = tab.filterNotNull()
+
+    println(tab.asList())
+    println(tab1)
 
 }
