@@ -1,4 +1,5 @@
 import java.lang.NullPointerException
+import java.util.*
 
 fun main() {
     var str:String? = "Przemysław"
@@ -32,6 +33,15 @@ fun main() {
 
     example1()
     example1a()
+
+    println(getNumber())
+}
+
+fun getNumber():Int{
+    val scanner = Scanner(System.`in`)
+    val no = scanner.nextInt()
+
+    return no
 }
 
 fun example1(){
@@ -53,6 +63,7 @@ fun example1(){
     }.also {
         println("To część bloku also")
     }
+
 }
 
 fun example1a(){
@@ -79,5 +90,4 @@ fun example1a(){
 
     println(tab.asList())
     println(tab1)
-
 }
