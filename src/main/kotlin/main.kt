@@ -1,5 +1,4 @@
 import java.lang.NullPointerException
-import java.lang.NumberFormatException
 
 fun main() {
     var str:String? = "Przemysław"
@@ -32,6 +31,7 @@ fun main() {
     }
 
     example1()
+    example1a()
 }
 
 fun example1(){
@@ -52,5 +52,14 @@ fun example1(){
         println("Wartość wynosi: ${it}")
     }.also {
         println("To część bloku also")
+    }
+}
+
+fun example1a(){
+    var str1:String? = "Stokłosa"
+    println("Długość napisu ${str1?.length}")
+
+    str1?.let {
+        println("Długość napisu ${it.length}")
     }
 }
