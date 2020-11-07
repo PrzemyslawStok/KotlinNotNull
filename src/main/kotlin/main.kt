@@ -62,4 +62,10 @@ fun example1a(){
     str1?.let {
         println("Długość napisu ${it.length}")
     }
+
+    if(true)
+        str1 = null
+
+    println("Długość napisu ${str1!!.length}")
+
 }
